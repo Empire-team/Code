@@ -58,13 +58,12 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="gender">
-                                            <option disabled="disabled" selected="selected">Gender</option>
-                                            <option>Male</option>
-                                            <option>Female</option>
-                                            <option>Other</option>
-                                        </select>
-                                        <div class="select-dropdown"></div>
+                                        <asp:DropDownList ID="DropDownListGender" runat="server">
+                                        <asp:ListItem>Male</asp:ListItem>
+                                        <asp:ListItem>Female</asp:ListItem>
+                                        <asp:ListItem>Others</asp:ListItem>
+                                        </asp:DropDownList>
+                                        
                                     </div>
                                 </div>
                             </div>

@@ -72,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\main.css" />
     <Content Include="css\regmain.css" />
     <Content Include="css\util.css" />
     <Content Include="CustomerReg.aspx" />
@@ -84,6 +85,7 @@
     <Content Include="fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
     <Content Include="frm_home.aspx" />
     <Content Include="frm_login.aspx" />
+    <Content Include="images\bg-01.jpg" />
     <Content Include="images\bg-heading-02.jpg" />
     <Content Include="images\icons\favicon.ico" />
     <Content Include="js\main.js" />

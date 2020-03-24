@@ -10,12 +10,7 @@
     <form id="form1" runat="server">
         <div>
             Welcome Home
-            <asp:DropDownList ID="DropDownListGender" runat="server">
-                <asp:ListItem>Male</asp:ListItem>
-                <asp:ListItem>Female</asp:ListItem>
-                <asp:ListItem>Others</asp:ListItem>
-            </asp:DropDownList>
-        </div>
+            </div>
     </form>
 </body>
 </html>
