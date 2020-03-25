@@ -49,6 +49,15 @@ namespace ERP {
         protected global::System.Web.UI.WebControls.DropDownList DropDownListGender;
         
         /// <summary>
+        /// TextBoxEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
+        
+        /// <summary>
         /// TextBoxCusAddress control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,33 @@ namespace ERP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxCity;
+        
+        /// <summary>
+        /// TextBoxState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxState;
+        
+        /// <summary>
+        /// TextBoxZipCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxZipCode;
+        
+        /// <summary>
+        /// DropDownListCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListCountry;
         
         /// <summary>
         /// ButtonRegister control.

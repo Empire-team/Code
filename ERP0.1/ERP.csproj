@@ -45,6 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.2375.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.Linq, Version=4.9.1920.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.MySql, Version=8.17.1583.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.MySql.Linq, Version=4.9.1920.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -130,6 +134,11 @@
     <Compile Include="CustomerReg.aspx.designer.cs">
       <DependentUpon>CustomerReg.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataContextERP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContextERP.lqml</DependentUpon>
+    </Compile>
     <Compile Include="frm_adminHome.aspx.cs">
       <DependentUpon>frm_adminHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -209,6 +218,16 @@
     <Content Include="fonts\poppins\Poppins-SemiBoldItalic.ttf" />
     <Content Include="fonts\poppins\Poppins-Thin.ttf" />
     <Content Include="fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="DataContextERP.Diagram1.view">
+      <DependentUpon>DataContextERP.lqml</DependentUpon>
+    </Content>
+    <Content Include="DataContextERP.edps">
+      <DependentUpon>DataContextERP.lqml</DependentUpon>
+    </Content>
+    <Content Include="DataContextERP.lqml">
+      <Generator>DevartLinqToSqlGenerator</Generator>
+      <LastGenOutput>DataContextERP.Designer.cs</LastGenOutput>
+    </Content>
     <None Include="packages.config" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css.map" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css.map" />

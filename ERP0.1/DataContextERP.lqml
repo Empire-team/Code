@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="erp" EntityNamespace="ErpContext" ContextNamespace="ErpContext" Class="ErpDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="47da951b-69dc-4186-b144-85758fae5f34" Provider="Devart.Data.MySql.Linq.Provider.MySqlDataProvider, Devart.Data.MySql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=root;Password=root;Host=localhost;Database=erp;Persist Security Info=True" Provider="Devart.Data.MySql" />
+  <Table Name="erp.account_details" Member="AccountDetails">
+    <Type Name="AccountDetail" ed:Guid="8f95d63d-f5b1-4e0f-a357-6c52dbd29400">
+      <Column Name="CUS_FnCode" Member="CUSFnCode" Type="System.String" DbType="CHAR(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" FixedLength="true" MaxLength="10" Unicode="true" ed:ValidateMaxLength="10" ed:ValidateRequired="true" ed:Guid="6875e864-483e-4de9-8024-e636b8848f9a" />
+      <Column Name="Id" Type="System.Int32" AutoSync="OnInsert" DbType="INT(11) NOT NULL AUTO_INCREMENT" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="835a0897-26de-426e-b048-7ff29758bedf" />
+      <Column Name="CusName" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="9e19bb27-77f2-4d12-8ee9-c042623aebd8" />
+      <Column Name="Gender" Type="System.String" DbType="CHAR(20) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" FixedLength="true" MaxLength="20" Unicode="true" ed:ValidateMaxLength="20" ed:ValidateRequired="true" ed:Guid="73432c93-5280-4531-965d-ef202fe08f3f" />
+      <Column Name="Address" Type="System.String" DbType="VARCHAR(225) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="225" Unicode="true" ed:ValidateMaxLength="225" ed:ValidateRequired="true" ed:Guid="9498fae2-6938-4d9b-8baf-87550daae1fc" />
+      <Column Name="City" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="dc8cf6de-a944-4636-9038-def3af84c1e1" />
+      <Column Name="State" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="67d6c8b9-c5a0-41aa-8851-8cdb1ad457fc" />
+      <Column Name="ZipCode" Type="System.String" DbType="CHAR(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" FixedLength="true" MaxLength="10" Unicode="true" ed:ValidateMaxLength="10" ed:ValidateRequired="true" ed:Guid="8d6f05f4-7e88-4e31-8042-e4f61e91e022" />
+      <Column Name="Country" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="7ff143ff-f1e0-4127-8112-c0a2b317a055" />
+      <Column Name="PhNo" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="d2782e7e-c723-4ff9-aeac-94088895fdb9" />
+      <Column Name="Email" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="62652b17-410c-479a-9dc6-c7ada7207e34" />
+      <Association Name="Functionkeymaster_AccountDetail" ed:AssociationGuid="9ae6ad38-1808-485b-8d42-59b5de53f8c4" Member="Functionkeymaster" ed:Guid="e23301fa-8291-40ec-8da5-593d7467d615" ThisKey="CUSFnCode" OtherKey="Code" Type="Functionkeymaster" DeleteRule="RESTRICT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="erp.functionkeymaster" Member="Functionkeymasters">
+    <Type Name="Functionkeymaster" ed:Guid="1425f954-1394-4c29-8685-00e0e01cc7d1">
+      <Column Name="Code" Type="System.String" DbType="CHAR(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" DefaultValue="'0'" FixedLength="true" MaxLength="10" Unicode="true" ed:ValidateMaxLength="10" ed:ValidateRequired="true" ed:Guid="dada1952-65bd-4c07-a389-2442228f7c5c" />
+      <Column Name="Name" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="de685c65-71a0-4986-a8a1-fa13b8c9643b" />
+      <Column Name="DisplayName" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="7b9fe54e-f89f-4e50-8904-e4c1cc38db0a" />
+      <Column Name="Abbrevation" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="cc0c101a-5cf9-4ffc-8b6b-e6c2a52f3b2a" />
+      <Column Name="Narration1" Type="System.String" DbType="VARCHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="11f3c5cc-8c2c-45f5-b599-f1e870646753" />
+      <Column Name="Narration2" Type="System.String" DbType="VARCHAR(50) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="8ce228de-80c5-4461-91c9-9c1c45a86aed" />
+      <Association Name="Functionkeymaster_AccountDetail" ed:AssociationGuid="9ae6ad38-1808-485b-8d42-59b5de53f8c4" Member="AccountDetails" ed:Guid="e0ff8f2b-1254-4741-b680-6989ac90f0a2" ThisKey="Code" OtherKey="CUSFnCode" Type="AccountDetail" />
+    </Type>
+  </Table>
+  <Function Name="erp.sp_accountdetails" Method="SpAccountdetail" ed:Guid="590a8dfd-39ec-45cc-bba6-7cd02ab328b8">
+    <Parameter Name="p_fndisplayname" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_cusname" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_gender" Type="System.String" DbType="CHAR(20)" FixedLength="true" MaxLength="20" />
+    <Parameter Name="p_address" Type="System.String" DbType="VARCHAR(225)" FixedLength="true" MaxLength="225" />
+    <Parameter Name="p_city" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_state" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_zipcode" Type="System.String" DbType="CHAR(10)" FixedLength="true" MaxLength="10" />
+    <Parameter Name="p_country" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_phno" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_email" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

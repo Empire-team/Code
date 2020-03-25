@@ -60,11 +60,11 @@ namespace ERP
                     string strUserType = com.ExecuteScalar().ToString();
                     if(strUserType == "admin") 
                     {
-                        Response.Redirect("frm_adminHome.aspx");  //for sucsseful admin login
+                        Response.Redirect("frm_adminHome.aspx");  //for successful admin login
                     }
                     else
                     {
-                        Response.Redirect("frm_home.aspx"); //for sucsseful end-user login
+                        Response.Redirect("frm_home.aspx"); //for successful end-user login
                     }
                 }
                 else
