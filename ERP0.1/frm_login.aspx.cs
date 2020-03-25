@@ -9,7 +9,6 @@ using System.Text;
 using System.IO;
 using System.Security.Cryptography;
 using System.Xml;
-using System.Configuration;
 using System.Data;
 
 namespace ERP
@@ -56,7 +55,17 @@ namespace ERP
                 usercount = System.Convert.ToInt32(com.ExecuteScalar());// for taking single value
                 if (usercount == 1)  // comparing users from table 
                 {
-                    Response.Redirect("frm_home.aspx");  //for sucsseful login
+                    query = "select user_type from login where UserName = '" + username +"';";
+                    com = new MySqlCommand(query, cnn);
+                    string strUserType = com.ExecuteScalar().ToString();
+                    if(strUserType == "admin") 
+                    {
+                        Response.Redirect("frm_adminHome.aspx");  //for sucsseful admin login
+                    }
+                    else
+                    {
+                        Response.Redirect("frm_home.aspx"); //for sucsseful end-user login
+                    }
                 }
                 else
                 {

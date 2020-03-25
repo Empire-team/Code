@@ -83,6 +83,7 @@
     <Content Include="fonts\iconic\css\material-design-iconic-font.css" />
     <Content Include="fonts\iconic\css\material-design-iconic-font.min.css" />
     <Content Include="fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="frm_adminHome.aspx" />
     <Content Include="frm_home.aspx" />
     <Content Include="frm_login.aspx" />
     <Content Include="images\bg-01.jpg" />
@@ -128,6 +129,13 @@
     </Compile>
     <Compile Include="CustomerReg.aspx.designer.cs">
       <DependentUpon>CustomerReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_adminHome.aspx.cs">
+      <DependentUpon>frm_adminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_adminHome.aspx.designer.cs">
+      <DependentUpon>frm_adminHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="frm_home.aspx.cs">
       <DependentUpon>frm_home.aspx</DependentUpon>
