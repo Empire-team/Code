@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP", "ERP.csproj", "{EBFDB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{17056FFC-CC1C-4E02-B571-806141AE8D70}"
 	ProjectSection(SolutionItems) = preProject
-		Connection.xml = Connection.xml
+		Settings.xml = Settings.xml
 	EndProjectSection
 EndProject
 Global

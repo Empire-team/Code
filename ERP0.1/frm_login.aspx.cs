@@ -35,14 +35,26 @@ namespace ERP
                 username = txt_username.Text;
 
                 string connetionString = null;
+                string strServerName = "", strDatabase = "", strUid = "", strPassword = "";
                 MySqlConnection cnn;
                 // You'll need to put the correct path to your xml file here
                 XmlDocument xml = new XmlDocument();
-                xml.Load("G:/Empire Projects/ERP0.1/Connection.xml");
+                xml.Load("G://Empire Projects//ERP//Code//ERP0.1//Settings.xml");
                 // Select a specific node
-                XmlNode node = xml.SelectSingleNode("connectionStrings/connectionstring");
+                XmlNode node = xml.SelectSingleNode("Settings/SERVER");
                 // Get its value
-                connetionString = node.InnerText;
+                strServerName = node.InnerText;
+                //fetching db name from xml
+                node = xml.SelectSingleNode("Settings/DATABASE");
+                strDatabase = node.InnerText;
+                //fetching user id from xml
+                node = xml.SelectSingleNode("Settings/USER");
+                strUid = node.InnerText;
+                //fetching user id from xml
+                node = xml.SelectSingleNode("Settings/PASSWORD");
+                strPassword = node.InnerText;
+
+                connetionString = "Server ="+ strServerName + "; Database ="+ strDatabase+"; Uid = "+strUid+"; Pwd = "+strPassword;
                 cnn = new MySqlConnection(connetionString);
                 cnn.Open();
                 String query = "";

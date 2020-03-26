@@ -186,5 +186,6 @@ G:\Empire Projects\ERP\Code\ERP0.1\bin\Devart.Data.xml
 G:\Empire Projects\ERP\Code\ERP0.1\bin\Devart.Data.MySql.xml
 G:\Empire Projects\ERP\Code\ERP0.1\bin\MySql.Data.xml
 G:\Empire Projects\ERP\Code\ERP0.1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\Empire Projects\ERP\Code\ERP0.1\obj\Debug\ERP.csprojResolveAssemblyReference.cache
 G:\Empire Projects\ERP\Code\ERP0.1\obj\Debug\ERP.dll
 G:\Empire Projects\ERP\Code\ERP0.1\obj\Debug\ERP.pdb

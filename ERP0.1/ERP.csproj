@@ -228,6 +228,7 @@
       <Generator>DevartLinqToSqlGenerator</Generator>
       <LastGenOutput>DataContextERP.Designer.cs</LastGenOutput>
     </Content>
+    <Content Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css.map" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css.map" />
