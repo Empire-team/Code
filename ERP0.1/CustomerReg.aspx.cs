@@ -113,7 +113,7 @@ namespace ERP
 
         protected void ButtonViewRegistration_Click(object sender, EventArgs e)
         {
-            ScriptManager.RegisterStartupScript(Page, typeof(Page), "OpenWindow", "window.open('frm_ViewCustomerReg.aspx','mywindow','menubar=1,resizable=1,width=900,height=600,position=center');", true);
+            ScriptManager.RegisterStartupScript(Page, typeof(Page), "OpenWindow", "window.open('frm_ViewCustomerReg.aspx','mywindow','menubar=1,resizable=1,width=900,height=600,position:absolute');", true);
             //window.open('Popup.aspx', 'pagename', 'resizable=no,width=200,height=400');
         }
     }

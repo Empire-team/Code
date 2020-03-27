@@ -10,7 +10,25 @@
     <form id="form1" runat="server">
     <div>
     
-        Registration Details</div>
+        Registration Details
+        <asp:GridView ID="GridViewRegistrationDetails" runat="server" AutoGenerateColumns="false">
+            <Columns>
+                <asp:BoundField DataField="CusId" HeaderText="Cust Id" />
+                <asp:BoundField DataField="CusName" HeaderText="Customer Name" />
+                <asp:BoundField DataField="Gender" HeaderText="Gender" />
+                <asp:BoundField DataField="Address" HeaderText="Address" />
+                <asp:BoundField DataField="City" HeaderText="City" />
+                <asp:BoundField DataField="State" HeaderText="State" />
+                <asp:BoundField DataField="ZipCode" HeaderText="Zip Code" />
+                <asp:BoundField DataField="Country" HeaderText="Country" />
+                <asp:BoundField DataField="PhNo" HeaderText="Phone Number" />
+                <asp:BoundField DataField="Email" HeaderText="Email" />
+                <asp:BoundField DataField="GSTNo" HeaderText="GST Number" />
+            </Columns>
+        </asp:GridView>
+        <br />
+    
+    </div>
     </form>
 </body>
 </html>
