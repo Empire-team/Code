@@ -90,6 +90,7 @@
     <Content Include="frm_adminHome.aspx" />
     <Content Include="frm_home.aspx" />
     <Content Include="frm_login.aspx" />
+    <Content Include="frm_ViewCustomerReg.aspx" />
     <Content Include="images\bg-01.jpg" />
     <Content Include="images\bg-heading-02.jpg" />
     <Content Include="images\icons\favicon.ico" />
@@ -159,6 +160,13 @@
     </Compile>
     <Compile Include="frm_login.aspx.designer.cs">
       <DependentUpon>frm_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ViewCustomerReg.aspx.cs">
+      <DependentUpon>frm_ViewCustomerReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_ViewCustomerReg.aspx.designer.cs">
+      <DependentUpon>frm_ViewCustomerReg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
