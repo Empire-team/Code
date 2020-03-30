@@ -38,20 +38,26 @@
       <Association Name="Country_AccountDetail" ed:AssociationGuid="39040f35-ae15-4d8d-b2a8-62b4065e9964" Member="AccountDetails" ed:Guid="655bd406-a410-4f87-a4fe-a9a96d8918fc" ThisKey="CountryCode" OtherKey="Country" Type="AccountDetail" />
     </Type>
   </Table>
-  <Type Name="GetAccountDetailResult" ed:Guid="9e7ab330-1662-4a83-a098-59420ba09dd2">
-    <Column Name="CusId" Type="System.String" DbType="VARCHAR NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="2ba4783d-90a7-43fe-bb62-66853041338b" />
-    <Column Name="CusName" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="3b86f6dc-03db-48f7-9048-5ef6412131e7" />
-    <Column Name="Gender" Type="System.String" DbType="CHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="73fbb076-0aae-4e58-9180-b26255a25651" />
-    <Column Name="Address" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="55790fd6-4308-4d4a-9726-6dea008146b3" />
-    <Column Name="City" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="f3f74a09-afb1-42a0-a7f7-ec31a0defa71" />
-    <Column Name="State" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="0f4bf388-b888-4594-b94c-034e41b7bd33" />
-    <Column Name="ZipCode" Type="System.String" DbType="CHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="9eb2944b-ce59-45b9-9f20-fcce48e2d055" />
-    <Column Name="Country" Type="System.String" DbType="CHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="ad7115e7-68f0-4f20-abe0-56080151cd5d" />
-    <Column Name="PhNo" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="24c195dc-a337-49bc-8667-d17409e8047d" />
-    <Column Name="Email" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="59b5af6a-c55a-4c1d-84d1-808f802933aa" />
-    <Column Name="GSTNo" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="8dd162a2-66ef-40f3-90bf-31a12d79dd40" />
+  <Type Name="GetAccountDetailResult" ed:Guid="36cbbde0-a607-449d-a39d-5f3ec3ee7bba">
+    <Column Name="CusId" Type="System.String" DbType="VARCHAR NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="a54c386b-f4b6-4ed6-ab5b-8a9216c1a010" />
+    <Column Name="CusName" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="2a565303-703e-49c3-87ec-86c081eb10f4" />
+    <Column Name="Gender" Type="System.String" DbType="CHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="79d1f61e-7110-46c7-83dc-03cbd0723eda" />
+    <Column Name="Address" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="6d6c4de3-7b3e-4a5d-82d5-f0abd04051ef" />
+    <Column Name="City" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="bd296504-0e5b-4347-b74d-13f3e74c3420" />
+    <Column Name="State" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="6745c838-ef4a-4de9-a978-c1552bdfca81" />
+    <Column Name="ZipCode" Type="System.String" DbType="CHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" FixedLength="true" ed:ValidateRequired="true" ed:Guid="c0eae3bd-1ec5-4558-8cde-14d2aef9c42d" />
+    <Column Name="CountryName" Type="System.String" DbType="VARCHAR NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="d90d89fb-9d7c-4d32-b4a0-f55522754c9e" />
+    <Column Name="PhNo" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="eb9e3a46-c8bc-4ea8-a6e1-c68b66bafb04" />
+    <Column Name="Email" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="0f2c1c30-4538-4b16-bef8-7a58948e9511" />
+    <Column Name="GSTNo" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c03f2024-3ebd-4eb8-9f66-dec0fa3574f7" />
   </Type>
-  <Function Name="erp.sp_accountdetails" Method="SpAccountdetail" ed:Guid="590a8dfd-39ec-45cc-bba6-7cd02ab328b8">
+  <Function Name="erp.sp_country" Method="SpCountry" ed:Guid="d9e92a54-787f-460b-869f-4ff9e2f3cfbf">
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="erp.GetAccountDetails" Method="GetAccountDetail" ed:Guid="ad39e67f-c54a-45b8-b27a-ef0489c04913">
+    <ElementType Type="GetAccountDetailResult" />
+  </Function>
+  <Function Name="erp.sp_accountdetails" Method="SpAccountdetail" ed:Guid="ff3b5cd3-c3b1-4398-bedf-1363db1500c8">
     <Parameter Name="p_fndisplayname" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
     <Parameter Name="p_cusname" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
     <Parameter Name="p_gender" Type="System.String" DbType="CHAR(20)" FixedLength="true" MaxLength="20" />
@@ -64,11 +70,5 @@
     <Parameter Name="p_email" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
     <Parameter Name="p_gstno" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="erp.sp_country" Method="SpCountry" ed:Guid="d9e92a54-787f-460b-869f-4ff9e2f3cfbf">
-    <ElementType IdRef="ID1" />
-  </Function>
-  <Function Name="erp.GetAccountDetails" Method="GetAccountDetail" ed:Guid="fce0e2a3-9c41-48b3-b20b-30baeb83f133">
-    <ElementType Type="GetAccountDetailResult" />
   </Function>
 </Database>

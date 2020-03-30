@@ -14,6 +14,7 @@ namespace ERP
     public partial class CustomerReg : System.Web.UI.Page
     {
         public string strDisplayName = "Customer Registration";
+      
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -30,6 +31,7 @@ namespace ERP
                     DropDownListCountry.DataTextField = "CountryName";
                     DropDownListCountry.DataBind();
                     DropDownListCountry.Items.Insert(0, new ListItem("Select Country", ""));
+                    
                 }
             }
             catch (Exception ex)
@@ -38,6 +40,7 @@ namespace ERP
                 throw ex;
             }
         }
+
 
         public DataTable ObtainDataTableFromIEnumerable(System.Collections.IEnumerable ien)
         {
@@ -85,6 +88,44 @@ namespace ERP
             }
         }
 
+        #region Load Values to TextBox
+        public void LoadValues(CustomerReg parent, string strCusId, string strCusName, string strGender, string strAddress, string strCity, string strState, string strZipCode, string strCountry, string strPhno, string strEmail, string strGstNo)
+        {
+            try
+            {
+                TextBoxCusId = new TextBox();
+                TextBoxCusId.Text = strCusId;
+                TextBoxCusName = new TextBox();
+                TextBoxCusName.Text = strCusName;
+                DropDownListGender = new DropDownList();
+                DropDownListGender.SelectedValue = strGender;
+                TextBoxCusAddress = new TextBox();
+                TextBoxCusAddress.Text = strAddress;
+                TextBoxCity = new TextBox();
+                TextBoxCity.Text = strCity;
+                TextBoxState = new TextBox();
+                TextBoxState.Text = strState;
+                TextBoxZipCode = new TextBox();
+                TextBoxZipCode.Text = strZipCode;
+                DropDownListCountry = new DropDownList();
+                DropDownListCountry.SelectedValue = strCountry;
+                TextBoxCusPhno = new TextBox();
+                TextBoxCusPhno.Text = strPhno;
+                TextBoxEmail = new TextBox();
+                TextBoxEmail.Text = strEmail;
+                TextBoxGSTNo = new TextBox();
+                TextBoxGSTNo.Text = strGstNo; 
+                //Response.Redirect(HttpContext.Current.Request.Url.ToString(), true);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        #endregion
+
         protected void ButtonRegister_Click(object sender, EventArgs e)
         {
             try
@@ -93,8 +134,7 @@ namespace ERP
                 ErpDataContext db = new ErpDataContext();
                 string strcountry = DropDownListCountry.SelectedItem.Text;
                 db.SpAccountdetail(strDisplayName, TextBoxCusName.Text, DropDownListGender.SelectedValue.ToString(), TextBoxCusAddress.Text, TextBoxCity.Text, TextBoxState.Text, TextBoxZipCode.Text, DropDownListCountry.SelectedItem.ToString(), TextBoxCusPhno.Text, TextBoxEmail.Text, TextBoxGSTNo.Text);
-                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Saved Successfully" + "');", true);
-                //Response.Write("Saved Successfully");
+                ClientScript.RegisterStartupScript(GetType(), "myalert", "alert('" + "Saved Successfully" + "');", true);
             }
             catch (Exception ex)
             {
@@ -113,8 +153,8 @@ namespace ERP
 
         protected void ButtonViewRegistration_Click(object sender, EventArgs e)
         {
-            ScriptManager.RegisterStartupScript(Page, typeof(Page), "OpenWindow", "window.open('frm_ViewCustomerReg.aspx','mywindow','menubar=1,resizable=1,width=900,height=600,position:absolute');", true);
-            //window.open('Popup.aspx', 'pagename', 'resizable=no,width=200,height=400');
+          ScriptManager.RegisterStartupScript(Page, typeof(Page), "OpenWindow", "window.open('frm_ViewCustomerReg.aspx','mywindow','menubar=1,resizable=1,width=900,height=600,position:absolute');", true);
+            
         }
     }
 }

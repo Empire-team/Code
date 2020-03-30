@@ -801,7 +801,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>2ba4783d-90a7-43fe-bb62-66853041338b</Path>
+                      <Path>a54c386b-f4b6-4ed6-ab5b-8a9216c1a010</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -820,7 +820,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>3b86f6dc-03db-48f7-9048-5ef6412131e7</Path>
+                      <Path>2a565303-703e-49c3-87ec-86c081eb10f4</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -839,7 +839,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>73fbb076-0aae-4e58-9180-b26255a25651</Path>
+                      <Path>79d1f61e-7110-46c7-83dc-03cbd0723eda</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -858,7 +858,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>55790fd6-4308-4d4a-9726-6dea008146b3</Path>
+                      <Path>6d6c4de3-7b3e-4a5d-82d5-f0abd04051ef</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -877,7 +877,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>f3f74a09-afb1-42a0-a7f7-ec31a0defa71</Path>
+                      <Path>bd296504-0e5b-4347-b74d-13f3e74c3420</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -896,7 +896,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>0f4bf388-b888-4594-b94c-034e41b7bd33</Path>
+                      <Path>6745c838-ef4a-4de9-a978-c1552bdfca81</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -915,7 +915,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>9eb2944b-ce59-45b9-9f20-fcce48e2d055</Path>
+                      <Path>c0eae3bd-1ec5-4558-8cde-14d2aef9c42d</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -934,7 +934,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>ad7115e7-68f0-4f20-abe0-56080151cd5d</Path>
+                      <Path>d90d89fb-9d7c-4d32-b4a0-f55522754c9e</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -953,7 +953,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>24c195dc-a337-49bc-8667-d17409e8047d</Path>
+                      <Path>eb9e3a46-c8bc-4ea8-a6e1-c68b66bafb04</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -972,7 +972,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>59b5af6a-c55a-4c1d-84d1-808f802933aa</Path>
+                      <Path>0f2c1c30-4538-4b16-bef8-7a58948e9511</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -991,7 +991,7 @@
                       <Height>18 px</Height>
                     </Size>
                     <Oid xsi:type="SchemaModelOID">
-                      <Path>8dd162a2-66ef-40f3-90bf-31a12d79dd40</Path>
+                      <Path>c03f2024-3ebd-4eb8-9f66-dec0fa3574f7</Path>
                       <TypeName>EntityDeveloper.Linq.LinqConnectProperty</TypeName>
                     </Oid>
                   </Model>
@@ -1007,8 +1007,8 @@
               </Model>
             </Children>
             <Location>
-              <X>350 px</X>
-              <Y>-188 px</Y>
+              <X>358 px</X>
+              <Y>-6 px</Y>
             </Location>
             <Size>
               <Width>150 px</Width>
@@ -1024,7 +1024,7 @@
             </MaxSize>
             <Ports />
             <Oid xsi:type="SchemaModelOID">
-              <Path>9e7ab330-1662-4a83-a098-59420ba09dd2</Path>
+              <Path>36cbbde0-a607-449d-a39d-5f3ec3ee7bba</Path>
               <TypeName>EntityDeveloper.Linq.LinqComplexType</TypeName>
             </Oid>
             <FixedHeight>35 px</FixedHeight>
@@ -1035,8 +1035,8 @@
           <ScaleMode>Free</ScaleMode>
           <Scale>1</Scale>
           <Location>
-            <X>-160 px</X>
-            <Y>-425 px</Y>
+            <X>-145 px</X>
+            <Y>-92 px</Y>
           </Location>
         </ViewPort>
         <Oid xsi:type="SchemaModelOID">

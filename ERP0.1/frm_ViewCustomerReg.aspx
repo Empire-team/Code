@@ -11,8 +11,9 @@
     <div>
     
         Registration Details
-        <asp:GridView ID="GridViewRegistrationDetails" runat="server" AutoGenerateColumns="false">
+        <asp:GridView ID="GridViewRegistrationDetails" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridViewRegistrationDetails_SelectedIndexChanged">
             <Columns>
+                <asp:ButtonField CommandName="Select" Text="Select" />
                 <asp:BoundField DataField="CusId" HeaderText="Cust Id" />
                 <asp:BoundField DataField="CusName" HeaderText="Customer Name" />
                 <asp:BoundField DataField="Gender" HeaderText="Gender" />
@@ -20,7 +21,7 @@
                 <asp:BoundField DataField="City" HeaderText="City" />
                 <asp:BoundField DataField="State" HeaderText="State" />
                 <asp:BoundField DataField="ZipCode" HeaderText="Zip Code" />
-                <asp:BoundField DataField="Country" HeaderText="Country" />
+                <asp:BoundField DataField="CountryName" HeaderText="Country" />
                 <asp:BoundField DataField="PhNo" HeaderText="Phone Number" />
                 <asp:BoundField DataField="Email" HeaderText="Email" />
                 <asp:BoundField DataField="GSTNo" HeaderText="GST Number" />

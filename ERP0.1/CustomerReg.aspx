@@ -37,16 +37,18 @@
                     <h2 class="title">Customer registration</h2>
                     <form id="form1" runat="server">
                         <div class="row" style ="float: right;">
-                            <asp:Button ID="ButtonViewRegistration" runat="server" BackColor="#FFCC00" ForeColor="Black" Height="41px" Text="View Customers" Width="133px" OnClick="ButtonViewRegistration_Click" />                        
+                            
+                            <asp:Button ID="ButtonViewRegistration" runat="server" BackColor="#FFCC00" ForeColor="Black" Height="41px" Text="View Customers" Width="133px" OnClick="ButtonViewRegistration_Click" />  
+                                                     
                         </div>
                         <div class="row row-space" style ="padding-top: 50px;"> 
                         <div class="input-group">
-                            <asp:TextBox class="input--style-2" runat="server" placeholder="Customer Id" name="cusid" id="TextBoxCusId" Width="300px"></asp:TextBox>                       
+                            <asp:TextBox class="input--style-2" runat="server" placeholder="Customer Id" name="cusid" id="TextBoxCusId" Width="300px" Enabled="False"></asp:TextBox>                       
                         </div>
                         </div>
                         
                         <div class="input-group">
-                           <asp:TextBox class="input--style-2" runat="server" placeholder="Name" name="name" id="TextBoxCusName"></asp:TextBox> 
+                           <asp:TextBox class="input--style-2" runat="server" type="text" placeholder="Name" name="name" id="TextBoxCusName"></asp:TextBox> 
                         </div>
                         
                         
