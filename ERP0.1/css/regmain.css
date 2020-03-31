@@ -479,6 +479,12 @@ input {
   display: table-cell;
 }
 
+.card-2 .card-heading1 {
+  background: url("../images/supplier.jpg") top left/cover no-repeat;
+  width: 29.1%;
+  display: table-cell;
+}
+
 .card-2 .card-body {
   display: table-cell;
   padding: 80px 90px;

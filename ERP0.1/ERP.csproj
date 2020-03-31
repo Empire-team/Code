@@ -79,7 +79,7 @@
     <Content Include="css\main.css" />
     <Content Include="css\regmain.css" />
     <Content Include="css\util.css" />
-    <Content Include="CustomerReg.aspx" />
+    <Content Include="frm_CustomerReg.aspx" />
     <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.css" />
     <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
     <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
@@ -90,10 +90,13 @@
     <Content Include="frm_adminHome.aspx" />
     <Content Include="frm_home.aspx" />
     <Content Include="frm_login.aspx" />
+    <Content Include="frm_SupplierReg.aspx" />
     <Content Include="frm_ViewCustomerReg.aspx" />
+    <Content Include="frm_ViewSupplierReg.aspx" />
     <Content Include="images\bg-01.jpg" />
     <Content Include="images\bg-heading-02.jpg" />
     <Content Include="images\icons\favicon.ico" />
+    <Content Include="images\supplier.jpg" />
     <Content Include="js\main.js" />
     <Content Include="vendor\animate\animate.css" />
     <Content Include="vendor\animsition\css\animsition.css" />
@@ -128,12 +131,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerReg.aspx.cs">
-      <DependentUpon>CustomerReg.aspx</DependentUpon>
+    <Compile Include="frm_CustomerReg.aspx.cs">
+      <DependentUpon>frm_CustomerReg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CustomerReg.aspx.designer.cs">
-      <DependentUpon>CustomerReg.aspx</DependentUpon>
+    <Compile Include="frm_CustomerReg.aspx.designer.cs">
+      <DependentUpon>frm_CustomerReg.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataContextERP.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -161,6 +164,13 @@
     <Compile Include="frm_login.aspx.designer.cs">
       <DependentUpon>frm_login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frm_SupplierReg.aspx.cs">
+      <DependentUpon>frm_SupplierReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_SupplierReg.aspx.designer.cs">
+      <DependentUpon>frm_SupplierReg.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frm_ViewCustomerReg.aspx.cs">
       <DependentUpon>frm_ViewCustomerReg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +178,14 @@
     <Compile Include="frm_ViewCustomerReg.aspx.designer.cs">
       <DependentUpon>frm_ViewCustomerReg.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frm_ViewSupplierReg.aspx.cs">
+      <DependentUpon>frm_ViewSupplierReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_ViewSupplierReg.aspx.designer.cs">
+      <DependentUpon>frm_ViewSupplierReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

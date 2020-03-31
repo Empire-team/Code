@@ -8,14 +8,14 @@ using System.Web.UI.WebControls;
 
 namespace ERP
 {
-    public partial class frm_ViewCustomerReg : System.Web.UI.Page
+    public partial class frm_ViewSupplierReg : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
                 ErpDataContext db = new ErpDataContext();
-                GridViewRegistrationDetails.DataSource = db.GetCustomerDetail();
+                GridViewRegistrationDetails.DataSource = db.GetSupplierDetail();
                 GridViewRegistrationDetails.DataBind();
             }
         }

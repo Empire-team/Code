@@ -10,7 +10,7 @@
 namespace ERP {
     
     
-    public partial class CustomerReg {
+    public partial class frm_CustomerReg {
         
         /// <summary>
         /// form1 control.

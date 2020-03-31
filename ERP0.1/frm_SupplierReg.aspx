@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CustomerReg.aspx.cs" Inherits="ERP.CustomerReg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frm_SupplierReg.aspx.cs" Inherits="ERP.frm_SupplierReg" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Customer Registration</title>
+    <title>Supplier Registration</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -29,26 +29,26 @@
 </head>
 
 <body>
-    <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+    <div class="page-wrapper bg-blue p-t-180 p-b-100 font-robo">
         <div class="wrapper wrapper--w960">
             <div class="card card-2">
-                <div class="card-heading"></div>
+                <div class="card-heading1"></div>
                 <div class="card-body">
-                    <h2 class="title">Customer registration</h2>
+                    <h2 class="title">SUPPLIER REGISTRATION</h2>
                     <form id="form1" runat="server">
                         <div class="row" style ="float: right;">
                             
-                            <asp:Button ID="ButtonViewRegistration" runat="server" BackColor="#FFCC00" ForeColor="Black" Height="41px" Text="View Customers" Width="133px" OnClick="ButtonViewRegistration_Click" />  
+                            <asp:Button ID="ButtonViewRegistration" runat="server" BackColor="#FFCC00" ForeColor="Black" Height="41px" Text="View Customers" Width="133px" onClientClick="SelectDetails()" />  
                                                      
                         </div>
                         <div class="row row-space" style ="padding-top: 50px;"> 
                         <div class="input-group">
-                            <asp:TextBox class="input--style-2" runat="server" placeholder="Customer Id" name="cusid" id="TextBoxCusId" Width="300px" Enabled="False"></asp:TextBox>                       
+                            <asp:TextBox class="input--style-2" runat="server" placeholder="Supplier Id" name="supid" id="TextBoxSupId" Width="300px" Enabled="False"></asp:TextBox>                       
                         </div>
                         </div>
                         
                         <div class="input-group">
-                           <asp:TextBox class="input--style-2" runat="server" type="text" placeholder="Name" name="name" id="TextBoxCusName"></asp:TextBox> 
+                           <asp:TextBox class="input--style-2" runat="server" type="text" placeholder="Name" name="name" id="TextBoxSupName"></asp:TextBox> 
                         </div>
                         
                         
@@ -57,7 +57,7 @@
                         <div class="row row-space"> 
                             <div class="col-2">
                             <div class="input-group">
-                            <asp:TextBox class="input--style-2" runat="server" placeholder="Phone No" name="phno" id="TextBoxCusPhno"></asp:TextBox>                      
+                            <asp:TextBox class="input--style-2" runat="server" placeholder="Phone No" name="phno" id="TextBoxSupPhno"></asp:TextBox>                      
                             </div>
                             </div>                              
                             <div class="col-2">
@@ -79,7 +79,7 @@
                             <asp:TextBox class="input--style-2" runat="server" placeholder="Email Id" name="email" id="TextBoxEmail"></asp:TextBox>                                                                        
                         </div>
                         <div class="input-group">  
-                            <asp:TextBox class="input--style-2" runat="server" placeholder="Address" name="address" id="TextBoxCusAddress" Width="300px"></asp:TextBox>                                                                        
+                            <asp:TextBox class="input--style-2" runat="server" placeholder="Address" name="address" id="TextBoxAddress" Width="300px"></asp:TextBox>                                                                        
                         </div>
 
                         <div class="row row-space"> 
@@ -118,8 +118,16 @@
                         </div>
 
                         <div class="p-t-30">
-                            <asp:Button ID="ButtonRegister" runat="server" BackColor="#00CC00" ForeColor="White" Height="41px" OnClick="ButtonRegister_Click" Text="Register" Width="133px" />
+                            <asp:Button ID="ButtonRegister" runat="server" BackColor="Red" ForeColor="White" Height="41px" Text="Register" Width="133px" OnClick="ButtonRegister_Click" />
                         </div>
+                        <script lang="javascript" type="text/javascript">
+                        var popup;
+                        function SelectDetails() {
+                        popup = window.open("frm_ViewSupplierReg.aspx", "Popup", "width=800,height=500");
+                        popup.focus();
+                        return false
+                        }
+                        </script>
                     </form>
                 </div>
             </div>

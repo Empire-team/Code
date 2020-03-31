@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frm_ViewCustomerReg.aspx.cs" Inherits="ERP.frm_ViewCustomerReg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frm_ViewSupplierReg.aspx.cs" Inherits="ERP.frm_ViewSupplierReg" %>
 
 <!DOCTYPE html>
 
@@ -9,18 +9,17 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
-        Registration Details
+    Registration Details
         <asp:GridView ID="GridViewRegistrationDetails" runat="server" AutoGenerateColumns="False">
             <Columns>
-                 <asp:TemplateField HeaderText="Select">
+                <asp:TemplateField HeaderText="Select">
                     <ItemTemplate>
                         <asp:LinkButton ID="lnkSelect" runat="server" Text="Select" CommandName="Select"
                             OnClientClick="return GetSelectedRow(this)" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:BoundField DataField="CusId" HeaderText="Cust Id" />
-                <asp:BoundField DataField="CusName" HeaderText="Customer Name" />
+                <asp:BoundField DataField="CusId" HeaderText="Supplier Id" />
+                <asp:BoundField DataField="CusName" HeaderText="Supplier Name" />
                 <asp:BoundField DataField="PhNo" HeaderText="Phone Number" />
                 <asp:BoundField DataField="Gender" HeaderText="Gender" />
                 <asp:BoundField DataField="Email" HeaderText="Email" />
@@ -33,7 +32,7 @@
             </Columns>
         </asp:GridView>
         <br />
-    <script type="text/javascript">
+        <script type="text/javascript">
             function GetSelectedRow(lnk) {
                 if (window.opener != null && !window.opener.closed) {
                     var row = lnk.parentNode.parentNode;
@@ -49,12 +48,12 @@
                     var zipcode = row.cells[9].innerHTML;
                     var country = row.cells[10].innerHTML;
                     var gst = row.cells[11].innerHTML;
-                    window.opener.document.getElementById("TextBoxCusId").value = id;
-                    window.opener.document.getElementById("TextBoxCusName").value = name;
-                    window.opener.document.getElementById("TextBoxCusPhno").value = phno;
+                    window.opener.document.getElementById("TextBoxSupId").value = id;
+                    window.opener.document.getElementById("TextBoxSupName").value = name;
+                    window.opener.document.getElementById("TextBoxSupPhno").value = phno;
                     window.opener.document.getElementById("DropDownListGender").value = gender;
                     window.opener.document.getElementById("TextBoxEmail").value = email;
-                    window.opener.document.getElementById("TextBoxCusAddress").value = address;
+                    window.opener.document.getElementById("TextBoxAddress").value = address;
                     window.opener.document.getElementById("TextBoxCity").value = city;
                     window.opener.document.getElementById("TextBoxState").value = state;
                     window.opener.document.getElementById("TextBoxZipCode").value = zipcode;
