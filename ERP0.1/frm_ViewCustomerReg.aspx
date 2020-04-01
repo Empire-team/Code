@@ -20,7 +20,7 @@
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="CusId" HeaderText="Cust Id" />
-                <asp:BoundField DataField="CusName" HeaderText="Customer Name" />
+                <asp:BoundField DataField="Name" HeaderText="Customer Name" />
                 <asp:BoundField DataField="PhNo" HeaderText="Phone Number" />
                 <asp:BoundField DataField="Gender" HeaderText="Gender" />
                 <asp:BoundField DataField="Email" HeaderText="Email" />

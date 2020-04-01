@@ -18,8 +18,8 @@
                             OnClientClick="return GetSelectedRow(this)" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:BoundField DataField="CusId" HeaderText="Supplier Id" />
-                <asp:BoundField DataField="CusName" HeaderText="Supplier Name" />
+                <asp:BoundField DataField="SupId" HeaderText="Supplier Id" />
+                <asp:BoundField DataField="Name" HeaderText="Supplier Name" />
                 <asp:BoundField DataField="PhNo" HeaderText="Phone Number" />
                 <asp:BoundField DataField="Gender" HeaderText="Gender" />
                 <asp:BoundField DataField="Email" HeaderText="Email" />
