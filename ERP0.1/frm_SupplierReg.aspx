@@ -119,6 +119,7 @@
 
                         <div class="p-t-30">
                             <asp:Button ID="ButtonRegister" runat="server" BackColor="Red" ForeColor="White" Height="41px" Text="Register" Width="133px" OnClick="ButtonRegister_Click" />
+                            <asp:HiddenField ID="HiddenField1" runat="server" />
                         </div>
                         <script lang="javascript" type="text/javascript">
                         var popup;

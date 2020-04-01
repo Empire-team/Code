@@ -50,6 +50,7 @@
                     var country = row.cells[10].innerHTML;
                     var gst = row.cells[11].innerHTML;
                     window.opener.document.getElementById("TextBoxCusId").value = id;
+                    window.opener.document.getElementById("HiddenField1").value = id;
                     window.opener.document.getElementById("TextBoxCusName").value = name;
                     window.opener.document.getElementById("TextBoxCusPhno").value = phno;
                     window.opener.document.getElementById("DropDownListGender").value = gender;

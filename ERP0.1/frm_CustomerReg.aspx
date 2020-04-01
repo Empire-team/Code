@@ -42,8 +42,8 @@
                                                      
                         </div>
                         <div class="row row-space" style ="padding-top: 50px;"> 
-                        <div class="input-group">
-                            <asp:TextBox class="input--style-2" runat="server" placeholder="Customer Id" name="cusid" id="TextBoxCusId" Width="300px" Enabled="False"></asp:TextBox>                       
+                        <div class="input-group" >
+                            <asp:TextBox class="input--style-2" runat="server" placeholder="Customer Id" name="cusid" id="TextBoxCusId" Width="300px" ReadOnly="True"></asp:TextBox>                       
                         </div>
                         </div>
                         
@@ -119,6 +119,7 @@
 
                         <div class="p-t-30">
                             <asp:Button ID="ButtonRegister" runat="server" BackColor="#00CC00" ForeColor="White" Height="41px" OnClick="ButtonRegister_Click" Text="Register" Width="133px" />
+                            <asp:HiddenField ID="HiddenField1" runat="server" />
                         </div>
 
                         <script lang="javascript" type="text/javascript">

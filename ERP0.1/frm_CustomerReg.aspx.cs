@@ -45,11 +45,53 @@ namespace ERP
         {
             try
             {
-                IsValidData();
-                ErpDataContext db = new ErpDataContext();
-                string strcountry = DropDownListCountry.SelectedItem.Text;
-                db.SpAccountdetail(strDisplayName, TextBoxCusName.Text, DropDownListGender.SelectedValue.ToString(), TextBoxCusAddress.Text, TextBoxCity.Text, TextBoxState.Text, TextBoxZipCode.Text, DropDownListCountry.SelectedItem.ToString(), TextBoxCusPhno.Text, TextBoxEmail.Text, TextBoxGSTNo.Text);
-                ClientScript.RegisterStartupScript(GetType(), "myalert", "alert('" + "Saved Successfully" + "');", true);
+                if(IsValidData())
+                {
+                    ErpDataContext db = new ErpDataContext();
+                    string strId = HiddenField1.Value.ToString();
+                    Int32 Id;
+                    if (!String.IsNullOrEmpty(strId))
+                    {
+                        var IdResult = db.GetAcountId(strId).ToList();
+                        Id = System.Convert.ToInt32(IdResult[0].Id);
+                        db.UpdateAccountDetail(TextBoxCusName.Text, DropDownListGender.SelectedValue.ToString(), TextBoxCusAddress.Text, TextBoxCity.Text, TextBoxState.Text, TextBoxZipCode.Text, DropDownListCountry.SelectedItem.ToString(), TextBoxCusPhno.Text, TextBoxEmail.Text, TextBoxGSTNo.Text, Id);
+                        ClientScript.RegisterStartupScript(GetType(), "myalert", "alert('" + "Updated Successfully" + "');", true);
+                        ButtonRegister.Text = "Register";
+                        Clear();
+                    }
+                    else
+                    {
+                        string strcountry = DropDownListCountry.SelectedItem.Text;
+                        db.SpAccountdetail(strDisplayName, TextBoxCusName.Text, DropDownListGender.SelectedValue.ToString(), TextBoxCusAddress.Text, TextBoxCity.Text, TextBoxState.Text, TextBoxZipCode.Text, DropDownListCountry.SelectedItem.ToString(), TextBoxCusPhno.Text, TextBoxEmail.Text, TextBoxGSTNo.Text);
+                        ClientScript.RegisterStartupScript(GetType(), "myalert", "alert('" + "Saved Successfully" + "');", true);
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        #endregion
+
+        #region Clear
+        private void Clear()
+        {
+            try
+            {
+                TextBoxCusId.Text = "";
+                HiddenField1.Value = "";
+                TextBoxCusName.Text = "";
+                TextBoxCusPhno.Text = "";
+                TextBoxEmail.Text = "";
+                TextBoxZipCode.Text = "";
+                TextBoxState.Text = "";
+                TextBoxGSTNo.Text = "";
+                TextBoxCity.Text = "";
+                TextBoxCusAddress.Text = "";
             }
             catch (Exception ex)
             {
@@ -59,12 +101,16 @@ namespace ERP
         }
         #endregion
 
-        private void IsValidData()
+        private bool IsValidData()
         {
-            //if(string.IsNullOrEmpty(TextBoxCusName.Text))
-            //{
-                
-            //}
+            
+            if (string.IsNullOrEmpty(TextBoxCusName.Text))
+            {
+                Globals.MessageBoxShow(this, "Please fill out this field");
+                TextBoxCusName.Focus();
+                return false;
+            }
+            return true;
         }
 
     }

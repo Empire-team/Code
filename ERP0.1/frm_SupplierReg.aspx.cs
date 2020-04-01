@@ -44,8 +44,46 @@ namespace ERP
             try
             {
                 ErpDataContext db = new ErpDataContext();
-                db.SpAccountdetail(strDisplayName, TextBoxSupName.Text, DropDownListGender.SelectedValue.ToString(), TextBoxAddress.Text, TextBoxCity.Text, TextBoxState.Text, TextBoxZipCode.Text, DropDownListCountry.SelectedValue.ToString(), TextBoxSupPhno.Text, TextBoxEmail.Text, TextBoxGSTNo.Text);
-                ClientScript.RegisterStartupScript(GetType(), "myalert", "alert('" + "Saved Successfully" + "');", true);
+                string strId = HiddenField1.Value.ToString();
+                Int32 Id;
+                if (!String.IsNullOrEmpty(strId))
+                {
+                    var IdResult = db.GetAcountId(strId).ToList();
+                    Id = System.Convert.ToInt32(IdResult[0].Id);
+                    db.UpdateAccountDetail(TextBoxSupName.Text, DropDownListGender.SelectedValue.ToString(), TextBoxAddress.Text, TextBoxCity.Text, TextBoxState.Text, TextBoxZipCode.Text, DropDownListCountry.SelectedItem.ToString(), TextBoxSupPhno.Text, TextBoxEmail.Text, TextBoxGSTNo.Text, Id);
+                    ClientScript.RegisterStartupScript(GetType(), "myalert", "alert('" + "Updated Successfully" + "');", true);
+                    ButtonRegister.Text = "Register";
+                    Clear();
+                }
+                else
+                {
+                    db.SpAccountdetail(strDisplayName, TextBoxSupName.Text, DropDownListGender.SelectedValue.ToString(), TextBoxAddress.Text, TextBoxCity.Text, TextBoxState.Text, TextBoxZipCode.Text, DropDownListCountry.SelectedValue.ToString(), TextBoxSupPhno.Text, TextBoxEmail.Text, TextBoxGSTNo.Text);
+                    ClientScript.RegisterStartupScript(GetType(), "myalert", "alert('" + "Saved Successfully" + "');", true);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region Clear
+        private void Clear()
+        {
+            try
+            {
+                TextBoxSupId.Text = "";
+                HiddenField1.Value = "";
+                TextBoxSupName.Text = "";
+                TextBoxSupPhno.Text = "";
+                TextBoxEmail.Text = "";
+                TextBoxZipCode.Text = "";
+                TextBoxState.Text = "";
+                TextBoxGSTNo.Text = "";
+                TextBoxCity.Text = "";
+                TextBoxAddress.Text = "";
             }
             catch (Exception ex)
             {

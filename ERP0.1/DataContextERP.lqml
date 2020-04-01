@@ -64,6 +64,9 @@
     <Column Name="Email" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="1494c7f7-b8d8-4dcd-b68d-e7e3f972a13e" />
     <Column Name="GSTNo" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="291ecf1d-dbd2-4a97-8b39-b11026432a7e" />
   </Type>
+  <Type Name="GetAcountIdResult" ed:Guid="6909077d-767b-4d08-a656-911835c7f74f">
+    <Column Name="Id" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="44d10fd7-a99a-4e69-8f3b-728afb2d29f0" />
+  </Type>
   <Function Name="erp.sp_country" Method="SpCountry" ed:Guid="d9e92a54-787f-460b-869f-4ff9e2f3cfbf">
     <ElementType IdRef="ID1" />
   </Function>
@@ -85,6 +88,24 @@
     <Parameter Name="p_phno" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
     <Parameter Name="p_email" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
     <Parameter Name="p_gstno" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="erp.GetAcountId" Method="GetAcountId" ed:Guid="5efefa02-5628-44aa-ae67-a247b7db8e27">
+    <Parameter Name="p_Id" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <ElementType Type="GetAcountIdResult" />
+  </Function>
+  <Function Name="erp.UpdateAccountDetails" Method="UpdateAccountDetail" ed:Guid="a0472f16-e62c-46d5-b1a0-819cf2d4f464">
+    <Parameter Name="p_name" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_gender" Type="System.String" DbType="CHAR(20)" FixedLength="true" MaxLength="20" />
+    <Parameter Name="p_address" Type="System.String" DbType="VARCHAR(225)" FixedLength="true" MaxLength="225" />
+    <Parameter Name="p_city" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_state" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_zipcode" Type="System.String" DbType="CHAR(10)" FixedLength="true" MaxLength="10" />
+    <Parameter Name="p_country" Type="System.String" DbType="CHAR(20)" FixedLength="true" MaxLength="20" />
+    <Parameter Name="p_phno" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_email" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_gstno" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_Id" Type="System.Int32" DbType="INT(10)" Precision="10" Scale="0" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

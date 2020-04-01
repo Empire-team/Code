@@ -505,4 +505,12 @@ input {
     display: block;
     padding: 60px 50px;
   }
+  .asterisk_input:after {
+  content: " *";
+  color: #e32;
+  position: absolute;
+  margin: 0px 0px 0px -20px;
+  font-size: 17px;
+  padding: 0 5px 0 0;
+}
 }

@@ -6,6 +6,8 @@ using System.Web;
 using Devart.Data.Linq;
 using ErpContext;
 using System.Reflection;
+using System.Web.UI.WebControls;
+using System.Web.UI;
 
 namespace ERP
 {
@@ -56,6 +58,15 @@ namespace ERP
 
                 throw ex;
             }
+        }
+        #endregion
+
+        #region MessageBox
+        public static void MessageBoxShow(Page page, string message)
+        {
+            Literal ltr = new Literal();
+            ltr.Text = @"<script type='text/javascript'> window.alert('" + message + "') </script>";
+            page.Controls.Add(ltr);
         }
         #endregion
     }
