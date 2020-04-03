@@ -116,11 +116,16 @@
                             <asp:TextBox class="input--style-2" runat="server" placeholder="GST Number" name="gstno" id="TextBoxGSTNo"></asp:TextBox>
                         </div>
                         </div>
-
-                        <div class="p-t-30">
+                        <div class="row row-space"> 
+                        <div class="col-2">
                             <asp:Button ID="ButtonRegister" runat="server" BackColor="Red" ForeColor="White" Height="41px" Text="Register" Width="133px" OnClick="ButtonRegister_Click" />
                             <asp:HiddenField ID="HiddenField1" runat="server" />
                         </div>
+                        <div class="col-2">
+                            <asp:Button ID="ButtonDelete" runat="server" BackColor="Red" ForeColor="White" Height="41px" Text="Delete" Width="133px" OnClick="ButtonDelete_Click" style="display:none;" />
+                        </div>
+                        </div>
+ 
                         <script lang="javascript" type="text/javascript">
                         var popup;
                         function SelectDetails() {

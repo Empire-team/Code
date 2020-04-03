@@ -131,17 +131,17 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataContextERP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContextERP.lqml</DependentUpon>
+    </Compile>
     <Compile Include="frm_CustomerReg.aspx.cs">
       <DependentUpon>frm_CustomerReg.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frm_CustomerReg.aspx.designer.cs">
       <DependentUpon>frm_CustomerReg.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DataContextERP.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataContextERP.lqml</DependentUpon>
     </Compile>
     <Compile Include="frm_adminHome.aspx.cs">
       <DependentUpon>frm_adminHome.aspx</DependentUpon>
@@ -244,6 +244,7 @@
     <Content Include="fonts\poppins\Poppins-SemiBoldItalic.ttf" />
     <Content Include="fonts\poppins\Poppins-Thin.ttf" />
     <Content Include="fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="ClassDiagram1.cd" />
     <Content Include="DataContextERP.Diagram1.view">
       <DependentUpon>DataContextERP.lqml</DependentUpon>
     </Content>
@@ -254,7 +255,6 @@
       <Generator>DevartLinqToSqlGenerator</Generator>
       <LastGenOutput>DataContextERP.Designer.cs</LastGenOutput>
     </Content>
-    <Content Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css.map" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css.map" />

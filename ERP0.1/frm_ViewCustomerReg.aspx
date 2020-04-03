@@ -61,6 +61,7 @@
                     window.opener.document.getElementById("TextBoxZipCode").value = zipcode;
                     window.opener.document.getElementById("DropDownListCountry").value = country;
                     window.opener.document.getElementById("TextBoxGSTNo").value = gst;
+                    window.opener.document.getElementById("ButtonDelete").style.display = "";
                     window.opener.document.getElementById("ButtonRegister").value = "Update";
                     window.close();
                     return false;
