@@ -13,5 +13,19 @@ namespace ERP
         {
 
         }
+
+        #region ButtonCustomerRegister_Click
+        protected void ButtonCustomerRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frm_CustomerReg.aspx");
+        }
+        #endregion
+
+        #region ButtonSupplierRegister_Click
+        protected void ButtonSupplierRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frm_SupplierReg.aspx");
+        }
+        #endregion
     }
 }

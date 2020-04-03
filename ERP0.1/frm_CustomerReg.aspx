@@ -33,13 +33,16 @@
         <div class="wrapper wrapper--w960">
             <div class="card card-2">
                 <div class="card-heading"></div>
-                <div class="card-body">
-                    <h2 class="title">Customer registration</h2>
+                <div class="card-body">                   
                     <form id="form1" runat="server">
                         <div class="row" style ="float: right;">
-                            
-                            <asp:Button ID="ButtonViewRegistration" runat="server" BackColor="#FFCC00" ForeColor="Black" Height="41px" Text="View Customers" Width="133px" onClientClick="SelectDetails()" />  
-                                                     
+                        <asp:HyperLink ID="HyperLink1" NavigateUrl="frm_adminHome.aspx" runat="server">&lt;&lt; Back to Home Page</asp:HyperLink>
+                        </div>
+                        <br />
+                        <br />
+                        <h2 class="title">Customer registration</h2>                       
+                        <div class="row" style ="float: right;">                           
+                            <asp:Button ID="ButtonViewRegistration" runat="server" BackColor="#FFCC00" ForeColor="Black" Height="41px" Text="View Customers" Width="133px" onClientClick="SelectDetails()" />                                                       
                         </div>
                         <div class="row row-space" style ="padding-top: 50px;"> 
                         <div class="input-group" >
