@@ -49,6 +49,26 @@
       <Association Name="Functionkeymaster_Login" ed:AssociationGuid="9b0131cf-1ba1-4b26-8aba-7c2a8320311d" Member="Functionkeymaster" ed:Guid="00c14302-d82e-447e-93cb-492a593776d8" ThisKey="LGFnCode" OtherKey="Code" Type="Functionkeymaster" DeleteRule="RESTRICT" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="erp.item_group" Member="ItemGroups">
+    <Type Name="ItemGroup" ed:Guid="ce9dc90e-90df-4d2d-9864-6987904f9910">
+      <Column Name="CatCode" Type="System.Int64" AutoSync="OnInsert" DbType="INT(2) UNSIGNED NOT NULL AUTO_INCREMENT" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="2" ed:ValidateRequired="true" ed:Guid="6154f169-d9df-48f1-b38f-b0de9fc4d1ac" />
+      <Column Name="Name" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="e6fb8935-67a4-4017-ac4f-a5e285edefc2" />
+      <Column Name="Narration1" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="ea608d97-c32c-466a-b6fd-631b56b951d1" />
+      <Column Name="Narration2" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="'0'" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="caf264a5-1520-4cee-a02b-2c84b052887d" />
+      <Association Name="ItemGroup_ItemGroupMaster" ed:AssociationGuid="4423dc9e-d027-47f2-9616-dace965b3b0b" Member="ItemGroupMasters" ed:Guid="27158ec7-2fce-45ae-bc3b-f9005327c9ba" ThisKey="CatCode" OtherKey="CatCode" Type="ItemGroupMaster" />
+    </Type>
+  </Table>
+  <Table Name="erp.item_group_master" Member="ItemGroupMasters">
+    <Type Name="ItemGroupMaster" ed:Guid="70c41a18-f91a-4e34-a721-13368fa9a877">
+      <Column Name="CatCode" Type="System.Int64" DbType="INT(2) UNSIGNED NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Always" Precision="2" ed:ValidateRequired="true" ed:Guid="c5632ad2-b91e-4931-95d9-ccda76cd32e6" />
+      <Column Name="Id" Type="System.Int64" AutoSync="OnInsert" DbType="INT(4) UNSIGNED NOT NULL AUTO_INCREMENT" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="4" ed:ValidateRequired="true" ed:Guid="1e7474e3-6507-4486-8f07-c362dacb8c00" />
+      <Column Name="Name" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="8136d6ff-6bf3-4b23-8fcf-39325e4347d5" />
+      <Column Name="Description" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="6d2803fe-6e96-4db8-8bc9-166a9fee5e11" />
+      <Column Name="Narration1" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="7113e326-b1ae-4fde-9521-bf1fe3080aa8" />
+      <Column Name="Narration2" Type="System.String" DbType="VARCHAR(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="''" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="996dfa2d-25bd-42fa-87d3-e892cda28f0a" />
+      <Association Name="ItemGroup_ItemGroupMaster" ed:AssociationGuid="4423dc9e-d027-47f2-9616-dace965b3b0b" Member="ItemGroup" ed:Guid="8e0bee60-b917-4677-97af-c2e35eda136f" ThisKey="CatCode" OtherKey="CatCode" Type="ItemGroup" DeleteRule="RESTRICT" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Type Name="GetAcountIdResult" ed:Guid="bb0e03c4-b174-4853-a285-18704d24d591">
     <Column Name="Id" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="1fcfacdf-d408-4732-927d-13255e85dafb" />
   </Type>
@@ -80,6 +100,11 @@
   </Type>
   <Type Name="SpLoginResult" ed:Guid="f97b581e-d498-4287-997d-73b4dd074c94">
     <Column Name="`COUNT(UserName)`" Member="COUNTUserName" Type="System.Int64" DbType="BIGINT NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="c0b1ec68-22c5-43ef-8798-8bd644e4be2d" />
+  </Type>
+  <Type Name="GetBrandResult" ed:Guid="adf9c18d-205b-4d4f-a43a-3286c228556c">
+    <Column Name="Code" Type="System.String" DbType="VARCHAR NULL" CanBeNull="true" UpdateCheck="Never" ed:ValidateRequired="false" ed:Guid="fa24683f-0eed-4709-b6fd-64a0784c013d" />
+    <Column Name="Name" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="8e78f1b5-49f6-47f9-abb7-132632370348" />
+    <Column Name="Description" Type="System.String" DbType="VARCHAR NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="9f39dff5-7e55-431a-9b0f-f6e3bf16ca6e" />
   </Type>
   <Function Name="erp.DeleteAccountDetails" Method="DeleteAccountDetail" ed:Guid="d98df7aa-180d-4bae-97a2-0da309abe7ec">
     <Parameter Name="p_Id" Type="System.Int32" DbType="INT(10)" Precision="10" Scale="0" />
@@ -128,6 +153,32 @@
     <Parameter Name="p_phno" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
     <Parameter Name="p_email" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
     <Parameter Name="p_gstno" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_Id" Type="System.Int32" DbType="INT(10)" Precision="10" Scale="0" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="erp.GetColor" Method="GetColor" ed:Guid="fb791035-76b6-46c7-9803-42abcfc73580">
+    <ElementType Type="GetBrandResult" />
+  </Function>
+  <Function Name="erp.GetSize" Method="GetSize" ed:Guid="b82d2214-1361-47e9-a021-beb775daf4f7">
+    <ElementType Type="GetBrandResult" />
+  </Function>
+  <Function Name="erp.GetBrand" Method="GetBrand" ed:Guid="f742a16a-15be-439c-9ccc-1848bedb94c3">
+    <ElementType Type="GetBrandResult" />
+  </Function>
+  <Function Name="erp.AddCategory" Method="AddCategory" ed:Guid="d8c09117-79e1-4d00-830a-ff5c3cb51840">
+    <Parameter Name="p_catname" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_name" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_desc" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="erp.UpdateCategory" Method="UpdateCategory" ed:Guid="f8d239a8-2f7a-44b2-abe0-d0a07a1c7257">
+    <Parameter Name="p_name" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_desc" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="p_Id" Type="System.Int32" DbType="INT(10)" Precision="10" Scale="0" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="erp.DeleteCategory" Method="DeleteCategory" ed:Guid="1cee0906-86a8-444c-b105-de9127d999a9">
+    <Parameter Name="p_catname" Type="System.String" DbType="VARCHAR(50)" FixedLength="true" MaxLength="50" />
     <Parameter Name="p_Id" Type="System.Int32" DbType="INT(10)" Precision="10" Scale="0" />
     <Return Type="System.Int32" />
   </Function>

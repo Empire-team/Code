@@ -50,6 +50,8 @@ input {
     <asp:Button ID="ButtonCustomerRegister" runat="server" BackColor="#7D3C98" ForeColor="White" Height="70px" Text="Customer Registration" Width="200px" OnClick="ButtonCustomerRegister_Click" />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
     <asp:Button ID="ButtonSupplierRegister" runat="server" BackColor="#58D68D" ForeColor="White" Height="70px" Text="Supplier Registration" Width="200px" OnClick="ButtonSupplierRegister_Click" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+    <asp:Button ID="ButtonCategory" runat="server" BackColor="#0ADFF4" ForeColor="White" Height="70px" Text="Add Category" Width="200px" OnClick="ButtonCategory_Click" />
     </div>
     </form>
 </body>

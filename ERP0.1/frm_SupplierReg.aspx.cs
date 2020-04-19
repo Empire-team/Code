@@ -98,7 +98,7 @@ namespace ERP
         }
         #endregion
 
-            #region Clear
+        #region Clear
         private void Clear()
         {
             try

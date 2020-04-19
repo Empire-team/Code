@@ -79,6 +79,8 @@
     <Content Include="css\main.css" />
     <Content Include="css\regmain.css" />
     <Content Include="css\util.css" />
+    <Content Include="frm_Category.aspx" />
+    <Content Include="frm_CategorySelect.aspx" />
     <Content Include="frm_CustomerReg.aspx" />
     <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.css" />
     <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
@@ -135,6 +137,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataContextERP.lqml</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Category.aspx.cs">
+      <DependentUpon>frm_Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_Category.aspx.designer.cs">
+      <DependentUpon>frm_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CategorySelect.aspx.cs">
+      <DependentUpon>frm_CategorySelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm_CategorySelect.aspx.designer.cs">
+      <DependentUpon>frm_CategorySelect.aspx</DependentUpon>
     </Compile>
     <Compile Include="frm_CustomerReg.aspx.cs">
       <DependentUpon>frm_CustomerReg.aspx</DependentUpon>

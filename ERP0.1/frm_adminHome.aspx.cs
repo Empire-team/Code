@@ -27,5 +27,12 @@ namespace ERP
             Response.Redirect("frm_SupplierReg.aspx");
         }
         #endregion
+
+        #region ButtonCategory_Click
+        protected void ButtonCategory_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frm_Category.aspx");
+        }
+        #endregion
     }
 }

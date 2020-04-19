@@ -10,7 +10,7 @@
 namespace ERP {
     
     
-    public partial class frm_adminHome {
+    public partial class frm_CategorySelect {
         
         /// <summary>
         /// form1 control.
@@ -22,30 +22,30 @@ namespace ERP {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ButtonCustomerRegister control.
+        /// ButtonBrand control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonCustomerRegister;
+        protected global::System.Web.UI.WebControls.Button ButtonBrand;
         
         /// <summary>
-        /// ButtonSupplierRegister control.
+        /// ButtonSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSupplierRegister;
+        protected global::System.Web.UI.WebControls.Button ButtonSize;
         
         /// <summary>
-        /// ButtonCategory control.
+        /// ButtonColor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonCategory;
+        protected global::System.Web.UI.WebControls.Button ButtonColor;
     }
 }
